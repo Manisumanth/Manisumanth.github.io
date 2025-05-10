@@ -1,17 +1,62 @@
 *{
     margin: 0;
-    text-decoration: none;
 }
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+
 header{
     display: flex;
     justify-content: space-between;
     background-color: goldenrod;
     color: brown;
+    padding: 10px;
 }
 
-li{
+header li{
     display:inline-block;
     font-size: 20px;
     padding: 5px;
     text-decoration: none;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.row
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box {
+    width: 400px;
+    padding: 20px;
+}
+
+.btn-signup {
+    background-color: orange;
+    margin-top: 10px;
+    padding:7px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+}
+
+.summary {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.image {
+    border-radius: 50px;
+}
+
+.title {
+    font-size: 30px;
 }
