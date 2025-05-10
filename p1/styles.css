@@ -92,16 +92,15 @@ header a{
 
 }
 
-.services-container{
-    width: 100px;
-    padding: 16px;
-    background-color: aquamarine;
+.servives {
+    background-color: wheat;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.services-box {
-    width: 30%;
-    background-color: aliceblue;
-    font-size: 16px;
-    padding: 10px;
+.servives-list {
     text-align: center;
+    margin: 0 auto;
+    padding-left: 20px;
+    font-size: 16px;
 }
