@@ -62,7 +62,7 @@ header a{
 }
 
 .projects {
-    padding: 40px;
+    padding: 50px;
     text-align: center;
     background-color: aqua;
 }
@@ -74,7 +74,8 @@ header a{
 }
 
 .proj-box {
-    width: 200px;
+    width: 50px;
+    font-size: 15px;
     background-color: white;
     padding: 10px;
     text-align: center;
@@ -86,6 +87,7 @@ header a{
     padding:7px;
     font-size: 20px;
     border-radius: 10px;
-    border:none;
+    border: 1px;;
+    cursor: pointer;
 
 }
