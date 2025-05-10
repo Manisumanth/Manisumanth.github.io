@@ -40,7 +40,7 @@ header a{
 }
 
 .btn-signup {
-    background-color: orange;
+    background-color:  lightblue;
     margin-top: 10px;
     padding:7px;
     font-size: 20px;
@@ -59,4 +59,31 @@ header a{
 
 .title {
     font-size: 30px;
+}
+
+.projects {
+    padding: 400px;
+    text-align: center;
+}
+
+.proj-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.proj-box {
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.view-demo {
+    background-color:  lavenderblush;
+    margin-top: 10px;
+    padding:7px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+
 }
