@@ -91,3 +91,17 @@ header a{
     cursor: pointer;
 
 }
+
+.services-container{
+    width: 100px;
+    padding: 16px;
+    background-color: aquamarine;
+}
+
+.services-box {
+    width: 30%;
+    background-color: aliceblue;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+}
