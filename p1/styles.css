@@ -93,8 +93,9 @@ header a{
 }
 
 .services {
-  background-color: #f0f8ff;
-  padding: 40px;
+  width: 60%;
+  margin: 100px auto;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
