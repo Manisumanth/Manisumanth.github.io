@@ -92,15 +92,26 @@ header a{
 
 }
 
-.servives {
-    background-color: wheat;
-    padding: 40px 20px;
-    text-align: center;
+.services {
+  background-color: #f0f8ff;
+  padding: 40px;
+  text-align: center;
 }
 
-.servives-list {
-    text-align: center;
-    margin: 0 auto;
-    padding-left: 20px;
-    font-size: 16px;
+.service-box {
+  background-color: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  color: #555;
 }
