@@ -148,3 +148,44 @@ header a{
   line-height: 1.6;
   color: #333;
 }
+
+.contact-section {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.contact-section a {
+  color: #00cfff;
+  text-decoration: none;
+}
+
+.contact-section .icon {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+footer {
+  background-color: #00cfff;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+footer nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
