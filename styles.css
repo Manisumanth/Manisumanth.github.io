@@ -11,7 +11,7 @@ body {
   padding: 20px;
 }
 
-/* Style the container */
+
 .container {
   text-align: center;
   border: 1px solid #000;
@@ -21,7 +21,7 @@ body {
   border-radius: 10px;
 }
 
-/* Keep sections side by side on large screens, stacked on small */
+
 .sections {
   display: flex;
   justify-content: space-around;
@@ -30,7 +30,7 @@ body {
   gap: 40px;
 }
 
-/* Individual sections */
+
 .projects, .assignments {
   min-width: 200px;
 }
