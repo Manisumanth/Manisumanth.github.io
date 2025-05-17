@@ -6,7 +6,7 @@ const products = [
 
 const list = products.map(product => ({
   
-  ...product,
+  ...product;
   status: "completed",
   price: product.price + 5,
 }));
