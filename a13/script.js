@@ -8,11 +8,13 @@ const list = products.map(product => ({
   
   ...product,
   status: "completed",
-  price: product.price + 5
-
+  price: product.price + 5,
 }));
+
+const totalPrice = list.reduce((sum, product) => sum + product.price, 0);
 
 list.forEach(product => {
   console.log(`${product.name}: ${product.price}`);
   console.log("status "+product.status);
+  console.log("Total Price "+totalPrice);
 });
