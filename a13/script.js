@@ -6,12 +6,11 @@ const products = [
 
 const list = products.map(product => ({
   
-  id: product.id,
-  name: product.name,
+  ...product,
   price: product.price + 5
 
 }));
 
 list.forEach(product => {
-  console.log(`${product.name}: ${product.price}`);
+  console.log(${product.name}: ${product.price});
 });
