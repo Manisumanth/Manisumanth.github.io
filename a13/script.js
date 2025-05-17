@@ -13,5 +13,6 @@ const list = products.map(product => ({
 }));
 
 list.forEach(product => {
-  console.log(${product.name}: ${product.price},${product.status});
+  console.log(`${product.name}: ${product.price}`);
+  console.log("status "+product.status);
 });
