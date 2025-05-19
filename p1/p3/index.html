@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Simple ATM Login</title>
 </head>
 <body>
-    <h1>Bank ATM</h1>
-    <hr>
-    <script src="script.js"></script>
+  <h1>ATM Login</h1>
+
+  <label>Enter Card Number:</label><br>
+  <input type="text" id="card"><br>
+
+  <label>Enter PIN:</label><br>
+  <input type="password" id="pin"><br><br>
+
+  <button onclick="login()">Login</button>
+
+  <p id="msg"></p>
+  <div id="login-box"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
