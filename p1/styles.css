@@ -157,14 +157,6 @@ section {
   background-color: #fefefe;
 }
 
-.about-wrapper {
-  transition: 0.3s;
-}
-
-.about-wrapper:hover {
-  box-shadow: 0 0 12px rgba(0,119,204,0.15);
-}
-
 .about-heading {
   margin-bottom: 1rem;
   text-align: center;
