@@ -1,6 +1,7 @@
+
 const customerData = {
-  "1234567890": { pin: "1234", balance: 0, name: "John" },
-  "1234567891": { pin: "2345", balance: 0, name: "Cathy" },
+  "1234567890": { pin: "1234", balance: 7000, name: "John" },
+  "1234567891": { pin: "2345", balance: 5000, name: "Cathy" },
 };
 
 function showLoginPage() {
@@ -29,18 +30,22 @@ function authenticate() {
 
 function loadDashboard(card) {
   const client = customerData[card];
+  const otherCard = Object.keys(customerData).find(c => c !== card); // Get the other card number
+
   document.body.innerHTML = `
     <div class="welcome-screen">
       <h1>Welcome, ${client.name}</h1>
       <div class="options-panel">
         <label>Select Action & Enter Amount:</label>
         <div class="action-row">
-          <select id="task">
+          <select id="task" onchange="toggleTransferInput('${card}')">
             <option value="">--Choose--</option>
             <option value="deposit">Deposit</option>
             <option value="withdraw">Withdraw</option>
+            <option value="transfer">Transfer</option>
           </select>
           <input type="number" id="cash" placeholder="Enter Amount" />
+          <input type="text" id="targetCard" placeholder="Enter Card Number" style="display:none;" />
         </div>
         <button onclick="process('${card}')">Submit</button>
         <button class="exit-btn" onclick="showLoginPage()">Home</button>
@@ -50,11 +55,18 @@ function loadDashboard(card) {
   `;
 }
 
+function toggleTransferInput(card) {
+  const task = document.getElementById("task").value;
+  const targetCardInput = document.getElementById("targetCard");
+  targetCardInput.style.display = (task === "transfer") ? "inline-block" : "none";
+}
+
 function process(card) {
   const client = customerData[card];
   const task = document.getElementById("task").value;
   const amount = parseFloat(document.getElementById("cash").value);
   const result = document.getElementById("resultMessage");
+  const targetCard = document.getElementById("targetCard")?.value;
 
   if (!task || isNaN(amount) || amount <= 0) {
     result.textContent = "Please select an action and enter a valid amount.";
@@ -71,6 +83,22 @@ function process(card) {
     } else {
       result.textContent = "Insufficient balance!";
     }
+  } else if (task === "transfer") {
+    if (!targetCard || !customerData[targetCard] || targetCard === card) {
+      result.textContent = "Enter a valid card number ";
+      return;
+    }
+    if (client.balance >= amount) {
+      client.balance -= amount;
+      customerData[targetCard].balance += amount;
+      result.textContent = `Transferred ₹${amount} to ${customerData[targetCard].name}.\n` +
+        `${client.name}'s Current Balance: ₹${client.balance}\n` +
+        `${customerData[targetCard].name}'s New Balance: ₹${customerData[targetCard].balance}`;
+    } else {
+      result.textContent = "Insufficient balance for transfer";
+    }
   }
 }
+
 showLoginPage();
+
