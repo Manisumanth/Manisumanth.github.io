@@ -31,7 +31,7 @@ function loadDashboard(card) {
   const client = customerData[card];
   document.body.innerHTML = `
     <div class="welcome-screen">
-      <h1>Welcome, ${client.name} </h1>
+      <h1>Welcome, ${client.name}</h1>
       <div class="options-panel">
         <label>Select Action & Enter Amount:</label>
         <div class="action-row">
