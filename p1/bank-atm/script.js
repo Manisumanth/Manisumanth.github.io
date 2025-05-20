@@ -1,6 +1,5 @@
-
 const customerData = {
-  "1234567890": { pin: "1234", balance: 7000, name: "John" },
+  "1234567890": { pin: "1234", balance: 10000, name: "John" },
   "1234567891": { pin: "2345", balance: 5000, name: "Cathy" },
 };
 
@@ -30,11 +29,10 @@ function authenticate() {
 
 function loadDashboard(card) {
   const client = customerData[card];
-  const otherCard = Object.keys(customerData).find(c => c !== card); // Get the other card number
-
   document.body.innerHTML = `
     <div class="welcome-screen">
       <h1>Welcome, ${client.name}</h1>
+      <div id="balanceDisplay">Current Balance: ₹${client.balance}</div>
       <div class="options-panel">
         <label>Select Action & Enter Amount:</label>
         <div class="action-row">
@@ -45,7 +43,7 @@ function loadDashboard(card) {
             <option value="transfer">Transfer</option>
           </select>
           <input type="number" id="cash" placeholder="Enter Amount" />
-          <input type="text" id="targetCard" placeholder="Enter Card Number" style="display:none;" />
+          <input type="text" id="targetCard" placeholder="Target Card Number" style="display:none;" />
         </div>
         <button onclick="process('${card}')">Submit</button>
         <button class="exit-btn" onclick="showLoginPage()">Home</button>
@@ -59,6 +57,14 @@ function toggleTransferInput(card) {
   const task = document.getElementById("task").value;
   const targetCardInput = document.getElementById("targetCard");
   targetCardInput.style.display = (task === "transfer") ? "inline-block" : "none";
+}
+
+function updateBalanceDisplay(card) {
+  const client = customerData[card];
+  const balanceDisplay = document.getElementById("balanceDisplay");
+  if (balanceDisplay) {
+    balanceDisplay.textContent = `Current Balance: ₹${client.balance}`;
+  }
 }
 
 function process(card) {
@@ -75,30 +81,32 @@ function process(card) {
 
   if (task === "deposit") {
     client.balance += amount;
-    result.textContent = `Deposited ₹${amount}. New Balance: ₹${client.balance}`;
+    result.textContent = `Deposited ₹${amount}.`;
+    updateBalanceDisplay(card);
   } else if (task === "withdraw") {
     if (client.balance >= amount) {
       client.balance -= amount;
-      result.textContent = `Withdrew ₹${amount}. Remaining Balance: ₹${client.balance}`;
+      result.textContent = `Withdrew ₹${amount}.`;
+      updateBalanceDisplay(card);
     } else {
       result.textContent = "Insufficient balance!";
     }
   } else if (task === "transfer") {
     if (!targetCard || !customerData[targetCard] || targetCard === card) {
-      result.textContent = "Enter a valid card number ";
+      result.textContent = "Enter a valid target card number (not your own).";
       return;
     }
     if (client.balance >= amount) {
       client.balance -= amount;
       customerData[targetCard].balance += amount;
       result.textContent = `Transferred ₹${amount} to ${customerData[targetCard].name}.\n` +
-        `${client.name}'s Current Balance: ₹${client.balance}\n` +
+        `${client.name}'s New Balance: ₹${client.balance}\n` +
         `${customerData[targetCard].name}'s New Balance: ₹${customerData[targetCard].balance}`;
+      updateBalanceDisplay(card);
     } else {
-      result.textContent = "Insufficient balance for transfer";
+      result.textContent = "Insufficient balance for transfer!";
     }
   }
 }
-
 showLoginPage();
 
