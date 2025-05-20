@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATM Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="atm-container">
+    <h1>ATM Access Portal</h1>
+    <input type="text" id="card" placeholder="Card Number" />
+    <input type="password" id="pin" placeholder="Enter PIN" />
+    <button onclick="authenticate()">Login</button>
+    <div id="loginError" class="error"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
