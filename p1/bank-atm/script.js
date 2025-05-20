@@ -6,7 +6,7 @@ const customerData = {
 function showLoginPage() {
   document.body.innerHTML = `
     <div class="atm-container">
-      <h1>ATM Access</h1>
+      <h1>ATM Login</h1>
       <input type="text" id="card" placeholder="Card Number" />
       <input type="password" id="pin" placeholder="PIN" />
       <button onclick="authenticate()">Login</button>
