@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mani Sumanth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mani Sumanth Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <div class="container">
     <header>
-      <div><h1>Mani Sumanth</h1></div>
+      <h1>Mani Sumanth</h1>
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
@@ -22,93 +23,99 @@
     </header>
 
     <main>
+
+      <!-- Home Section -->
       <section id="home">
-        <div class="row">
-          <div class="box">
-            <h1 class="title">MERN Stack Developer</h1>
-            <p class="summary">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-              earum amet placeat inventore temporibus doloribus numquam impedit ducimus.
-            </p>
-            <p><button class="btn-signup">Know More</button></p>
-          </div>
-          <div class="box">
-            <img src="harry.webp" width="400px" class="image" alt="harry"/>
-          </div>
+        <div>
+          <h1 class="title">MERN Stack Developer</h1>
+          <p class="summary">Building scalable and performant web applications with modern technologies.</p>
+          <button class="btn-signup">Sign Up</button>
+        </div>
+        <div>
+          <img
+            src="images/home-image.jpg"
+            alt="Portfolio home"
+            class="image"
+          />
         </div>
       </section>
 
+      <!-- Projects Section -->
       <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="proj-container">
           <div class="proj-box">
+            <img src="foodstore.jpg" alt="Food Mart" class="proj-img" />
             <h3>Project 1</h3>
-            <p>Food Mart</p>
-            <p><button class="view-demo" onclick="location.href='foodmart'">View Demo</button></p>
+            <p>A modern food ordering app with user-friendly interface and cart functionality.</p>
+            <button class="view-demo" onclick="location.href='foodmart'">View Demo</button>
           </div>
           <div class="proj-box">
+            <img src="cart.jpg" alt="Cart" class="proj-img" />
             <h3>Project 2</h3>
-            <p>Cart<br><br>
-            </p>
-            <p><button class="view-demo" onclick="location.href='cart'">View Demo</button></p>
+            <p>Interactive shopping cart supporting product add/remove and checkout.</p>
+            <button class="view-demo" onclick="location.href='cart'">View Demo</button>
           </div>
           <div class="proj-box">
+            <img src="bankatm.jpg" alt="Bank ATM" class="proj-img" />
             <h3>Project 3</h3>
-            <p>Bank ATM</p>
-            <p><button class="view-demo" onclick="location.href='bank-atm' ">View Demo</button></p>
+            <p>ATM simulation with PIN verification, balance inquiry, withdrawals, and deposits.</p>
+            <button class="view-demo" onclick="location.href='bank-atm'">View Demo</button>
           </div>
           <div class="proj-box">
+            <img src="p4.jpg" alt="Portfolio" class="proj-img" />
             <h3>Project 4</h3>
-            <p>Portfolio</p>
-            <p>
-           <button class="view-demo" onclick="window.open('https://gcet-react-app-virid.vercel.app/')"><a>View Demo</a></button>
-  </p>
-</div> 
+            <p>My personal portfolio showcasing skills, projects, and contact information.</p>
+            <button class="view-demo" onclick="window.open('https://gcet-react-app-virid.vercel.app/', '_blank')">View Demo</button>
+          </div>
         </div>
       </section>
 
+      <!-- Services Section -->
       <section id="services">
         <h2 class="services-heading">Services</h2>
         <div class="service-box">
-          <h3><strong>FULL STACK DEVELOPER</strong></h3>
-          <p>I build web applications using the MERN STACK, combining modern frontend and backend</p>
+          <h3>Web Development</h3>
+          <p>Building responsive and high-performance websites using modern technologies.</p>
         </div>
         <div class="service-box">
-          <h3><strong>FRONT END DEVELOPMENT</strong></h3>
-          <p>Creating intuitive user interfaces using React.js, HTML, CSS and JavaScript</p>
+          <h3>UI/UX Design</h3>
+          <p>Designing intuitive user interfaces that provide great user experiences.</p>
+        </div>
+        <div class="service-box">
+          <h3>Consulting</h3>
+          <p>Providing expert advice on tech stack and project planning.</p>
         </div>
       </section>
 
+      <!-- About Section -->
       <section id="about">
         <h2 class="about-heading">About Me</h2>
         <div class="about-box">
-          <p>
-            I am currently pursuing B.Tech in my 2nd year. I have skills in JavaScript, Java, CSS, and HTML. 
-            I aspire to become a professional web developer and create modern, responsive websites.
-          </p>
+          <p>I am Mani Sumanth, a passionate MERN stack developer with a focus on delivering clean, efficient code and user-friendly web applications.</p>
         </div>
       </section>
 
+      <!-- Contact Section -->
       <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <p><img src="email.jpg" class="icon"> 
-          Email: <a href="mailto:x.xxxxxxxxxx@gmail.com">x.xxxxxxxxxx@gmail.com</a></p>
-        <p><img src="contact.jpg" class="icon"> 
-          Phone: xxxxxxxxxx</p>
-        <p><img src="linkedin.jpg" class="icon"> 
-          LinkedIn: <a href="https://www.linkedin.com/in/xxxx-xxxxxxx-xxxxxxxxxx-b62942306/" target="_blank">
-          My LinkedIn</a></p>
-      </section>
+        <h2>Contact</h2>
+        <p><img class="icon" src="email.jpg" alt="Email icon" /> <a href="mailto:manisumanth01@gmail.com">  123456789@gmail.com</a></p>
+        <p><img class="icon" src="contact.jpg" alt="Phone icon" /> <a href="tel:+91-9052768874">+91-123456789</a></p>
+        <p><img class="icon" src="linkedin.jpg" alt="Linkedin" /> <a href="linkedin: abcdefg"">Linked in</a></p></section>
+
     </main>
 
     <footer>
-      <p>© 2025 Mani Sumanth Kalle</p>
       <nav>
-        <a href="#home">Home</a> | 
-        <a href="#projects">Projects</a> | 
+        <a href="#home">Home</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#services">Services</a> |
+        <a href="#about">About</a> |
         <a href="#contact">Contact</a>
       </nav>
+      <p>© 2025 Mani Sumanth</p>
     </footer>
   </div>
+
 </body>
 </html>
